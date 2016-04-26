@@ -4,5 +4,162 @@
 
 .nav-wrapper
   width: 100%
+  height: 50px
+  overflow: hidden
+  position: relative
+  background: #fff
+  border-bottom: 2px solid rgba(80, 80, 80, 0.3)
+  transition: all 0.7s linear
+
+  &.active-wrapper
+    height: 100vh
+
+.nav-icon
+  width: 30px
+  height: 30px
+  position: absolute
+  top: 12px
+  right: 15px
+  cursor: pointer
+
+  span
+    width: 25px
+    height: 2px
+    background: #202020
+    position: absolute
+    transition: all 0.5s linear
+
+    &:nth-child(1)
+      top: 2px
+      transform: rotate(0)
+    &:nth-child(2)
+      top: 9px
+      transform: rotate(0)
+    &:nth-child(3)
+      top: 16px
+      transform: rotate(0)
+    &:nth-child(1).active-rotate
+      top: 9px
+      transform: rotate(135deg)
+    &:nth-child(2).active-rotate
+      top: 9px
+      transform: rotate()
+      opacity: 0
+    &:nth-child(3).active-rotate
+      top: 9px
+      transform: rotate(-135deg)
+
+
+.nav-display
+  width: 100%
   height: 100%
-  background: #ccc
+  font-family: 'Marcellus SC', sans-serif
+  margin-top: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+  ul
+    width: 100%
+    height: 100%
+    min-height: 300px
+    list-style: none
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &.active-ul
+      height: 100%
+
+
+  li
+    font-size: 20px
+    font-weight: bold
+    display: none
+    opacity: 0
+    justify-content: center
+    align-items: center
+    margin: 20px 0
+    transition: all 1s linear
+
+    &.active-li
+      opacity: 1
+
+  a
+    color: #202020
+    text-decoration: none
+
+  h1
+    font-family: 'Marcellus SC'
+    font-size: 20px
+    padding: 0 5px 2px 5px
+    opacity: 1
+    display: inline-block
+    margin-top: 0
+    position: absolute
+    top: 10px
+    left: 15px
+
+
+@media (min-width: 769px)
+
+  .nav-wrapper
+    width: 100%
+    height: 100px
+
+  .nav-icon
+    display: none
+
+  .nav-display
+    width: 100%
+    height: 100%
+    margin-top: 0
+
+    ul
+      display: flex
+      flex-direction: row
+      justify-content: center
+
+    li
+      display: inline-block
+      margin: 0 30px
+      position: relative
+      opacity: 1
+
+      &::after
+        content: ''
+        border-bottom: 2px solid #202020
+        width: 50%
+        position: absolute
+        left: 0
+        bottom: 0
+        transition: all 0.35s linear
+
+      &:hover:after
+        width: 100%
+
+    h1
+      font-size: 20px
+      font-family: 'Marcellus SC'
+      padding: 0 0 2px 0
+      margin: -22px 20px 0 0
+      position: relative
+      border: none
+
+      a
+        color: #202020
+        text-decoration: none
+
+
+      &::after
+        content: ''
+        border-bottom: 2px solid #202020
+        width: 50%
+        position: absolute
+        left: 0
+        bottom: 0
+        transition: all 0.35s linear
+
+      &:hover:after
+        width: 100%
