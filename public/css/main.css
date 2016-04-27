@@ -116,7 +116,8 @@
       opacity: 1; }
   .nav-display a {
     color: #202020;
-    text-decoration: none; }
+    text-decoration: none;
+    letter-spacing: 2.5px; }
   .nav-display h1 {
     font-family: "Marcellus SC";
     font-size: 20px;
@@ -161,13 +162,13 @@
       opacity: 1; }
       .nav-display li::after {
         content: "";
-        border-bottom: 2px solid #202020;
-        width: 50%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        width: 25%;
         position: absolute;
         left: 0;
         bottom: 0;
-        -webkit-transition: all 0.35s linear;
-        transition: all 0.35s linear; }
+        -webkit-transition: all 0.25s linear;
+        transition: all 0.25s linear; }
       .nav-display li:hover:after {
         width: 100%; }
     .nav-display h1 {
@@ -182,13 +183,13 @@
         text-decoration: none; }
       .nav-display h1::after {
         content: "";
-        border-bottom: 2px solid #202020;
-        width: 50%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        width: 100%;
         position: absolute;
         left: 0;
         bottom: 0;
-        -webkit-transition: all 0.35s linear;
-        transition: all 0.35s linear; }
+        -webkit-transition: all 0.25s linear;
+        transition: all 0.25s linear; }
       .nav-display h1:hover:after {
         width: 100%; } }
 .index-intro-wrapper {
@@ -252,7 +253,7 @@
   width: 100%;
   max-width: 1080px;
   height: 100%;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   text-align: center; }
   .collection-intro-display img {
     width: 100%;
@@ -260,5 +261,142 @@
     max-width: 600px;
     max-height: 600px; }
   .collection-intro-display h1 {
-    font-size: 60px;
-    font-family: "Poiret One", serif; }
+    font-size: 70px;
+    font-family: "Poiret One", serif;
+    letter-spacing: 10px; }
+  .collection-intro-display p {
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px; }
+
+.collection-slide-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 30px auto; }
+  .collection-slide-icon i {
+    font-size: 30px;
+    position: absolute; }
+    .collection-slide-icon i:nth-child(1) {
+      font-size: 60px;
+      margin-left: -10px;
+      top: 15px; }
+    .collection-slide-icon i:nth-child(2) {
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+  .collection-slide-icon:hover i:nth-child(2) {
+    -webkit-transform: translateY(22px);
+    transform: translateY(22px); }
+
+@media (min-width: 769px) {
+  .collection-intro-display h1 {
+    font-size: 100px; }
+  .collection-intro-display p {
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 2.5px; } }
+.collection-about-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.collection-about-display {
+  width: 100%;
+  height: 100%;
+  max-width: 1080px;
+  margin: 50px auto 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.collection-about-bimg {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("http://www.hessclassic.com/app/uploads/2016/04/tmp-porsche-bg-3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.about-info {
+  width: 50%;
+  height: auto;
+  background: #fcfcfc;
+  overflow: hidden;
+  margin-top: 70px;
+  margin-left: 50%;
+  border-top: 1px solid #202020;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .about-info.active-about-info {
+    height: auto; }
+  .about-info h2 {
+    font-size: 25px;
+    font-family: "Poiret One", serif;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 3px; }
+  .about-info p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: "Josefin Sans", arial;
+    margin: 30px 50px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: justify; }
+  .about-info figure {
+    width: 100%;
+    height: 100%; }
+    .about-info figure img {
+      width: 100%;
+      height: 100%;
+      margin: -5px 0 0 0; }
+
+.collection-spec-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.collection-spec-display {
+  width: 100%;
+  height: 100%;
+  max-width: 1080px;
+  background: #fcfcfc;
+  margin: 0 auto; }
+
+.spec-col-info {
+  width: 50%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top; }
+  .spec-col-info h2 {
+    font-size: 25px;
+    font-family: "Poiret One", serif;
+    margin: 80px 0 40px 0;
+    letter-spacing: 2px;
+    text-align: center; }
+  .spec-col-info p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: "Josefin Sans", arial;
+    line-height: 30px;
+    margin: 0 50px;
+    letter-spacing: 1px; }
+  .spec-col-info ul {
+    margin: 30px 0px 0px 50px; }
+    .spec-col-info ul li {
+      font-size: 16px;
+      line-height: 30px; }
+
+.spec-col-img {
+  width: 50%;
+  height: auto;
+  display: inline-block; }
+  .spec-col-img img {
+    width: 100%;
+    height: 100%; }
