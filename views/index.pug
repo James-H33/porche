@@ -3,34 +3,14 @@ section.index-intro-wrapper
   div.index-intro-display
     h1 THE COLLECTION
     ul
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-PORSCHE_356.png?82f50c")
-          p Porsche 356
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-ferrari_detoure.png?82f50c")
-          p Porsche 911
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-slider-bentley.png?82f50c")
-          p Porsche 911
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/04/hessclassic-LAMBORGHINI_detouree.png?82f50c")
-          p Porsche 911
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-PORSCHE_356.png?82f50c")
-          p Porsche 911
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-PORSCHE_356.png?82f50c")
-          p Porsche 911
-      li
-        a(href="")
-          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-PORSCHE_356.png?82f50c")
-          p Porsche 911
+      - items.forEach(function(item) {
+        li
+          a(href="/collection/" + item._id + "")
+            img(src="" + item.images[0] + "")
+            p= item.name
+      - })
+
+
 
 
 

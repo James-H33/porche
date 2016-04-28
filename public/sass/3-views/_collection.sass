@@ -122,7 +122,6 @@
   left: 0
   z-index: -1
   background:
-    image: url('http://www.hessclassic.com/app/uploads/2016/04/tmp-porsche-bg-3.jpg')
     size: contain
     repeat: no-repeat
 
@@ -356,6 +355,13 @@
     line-height: 30px
     margin: 40px 30px
     letter-spacing: 1px
+    opacity: 0
+    transform: translateY(250px)
+    transition: all 0.8s ease
+
+    &.active-history-text
+      opacity: 1
+      transform: translateY(0)
 
 @media (min-width: 769px)
 
