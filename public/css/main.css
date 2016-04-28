@@ -357,7 +357,6 @@ body {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background-image: url("http://www.hessclassic.com/app/uploads/2016/04/tmp-porsche-bg-3.jpg");
   background-size: contain;
   background-repeat: no-repeat; }
 
@@ -547,7 +546,16 @@ body {
     font-family: "Josefin Sans", arial;
     line-height: 30px;
     margin: 40px 30px;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    opacity: 0;
+    -webkit-transform: translateY(250px);
+    transform: translateY(250px);
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease; }
+    .history-two p.active-history-text {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
 
 @media (min-width: 769px) {
   .history-two p {

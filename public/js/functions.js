@@ -31,6 +31,7 @@ $(window).on('scroll', function() {
   specImg()
   cIntroTxtSlide();
   cHistoryTxtSlide();
+  cHistoryTxtTwoSlide();
 })
 
 
@@ -72,8 +73,6 @@ function navIconRotate() {
 function aboutInfo() {
   if ($(window).scrollTop() >= $('.about-info').offset().top - ($(window).height() * 0.8)) {
     $('.about-info').addClass('active-about-info');
-  } else {
-    $('.about-info').removeClass('active-about-info');
   }
 }
 
@@ -81,8 +80,6 @@ function aboutInfo() {
 function aboutImg(){
   if ($(window).scrollTop() >= $('.about-info img').offset().top - ($(window).height() * 1.2)) {
     $('.about-info img').addClass('active-about-info');
-  } else {
-    $('.about-info img').removeClass('active-about-info');
   }
 }
 
@@ -90,8 +87,6 @@ function aboutImg(){
 function specInfo(){
   if ($(window).scrollTop() >= $('.spec-col-info').offset().top - ($(window).height() * 0.8)) {
     $('.spec-col-info').addClass('active-col');
-  } else {
-    $('.spec-col-info').removeClass('active-col');
   }
 }
 
@@ -99,8 +94,6 @@ function specInfo(){
 function specImg() {
   if ($(window).scrollTop() >= $('.spec-col-img').offset().top - ($(window).height() * 0.8)) {
     $('.spec-col-img').addClass('active-col');
-  } else {
-    $('.spec-col-img').removeClass('active-col');
   }
 }
 
@@ -109,17 +102,19 @@ function cIntroTxtSlide() {
   if ($(window).scrollTop() >= $('.collection-intro-display h1').offset().top - ($(window).height() * 0.8)) {
     $('.collection-intro-display h1').addClass('active-intro-text');
     $('.collection-intro-display p').addClass('active-intro-text');
-  } else {
-    $('.collection-intro-display h1').removeClass('active-intro-text');
-    $('.collection-intro-display p').removeClass('active-intro-text');
   }
 }
 
-
+// History H1 Text Animation || Collection Page
 function cHistoryTxtSlide(){
   if ($(window).scrollTop() >= $('.history-layout-top h1').offset().top - ($(window).height() * 1.2)) {
     $('.history-layout-top h1').addClass('active-history-text');
-  } else {
-    $('.history-layout-top h1').removeClass('active-history-text');
+  }
+}
+
+// History Two P Text Animation || Collection Page
+function cHistoryTxtTwoSlide() {
+  if ($(window).scrollTop() >= $('.history-two').offset().top - ($(window).height() * 0.8)) {
+    $('.history-two p').addClass('active-history-text');
   }
 }
