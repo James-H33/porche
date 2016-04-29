@@ -39,6 +39,25 @@ var data = [
       'Reese Lindel rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ipsum dolor sit amet rem ipsum dolor sit amet.'
     ],
     histImage: ['/imgs/p911White-hist.jpg'],
+  },
+  {
+    name: 'PORSCHE TYPE C',
+    nameExt: 'PORSCHE AUTO UNION TYPE C',
+    year: '1936',
+    images: [
+    '/imgs/auto-1.png',
+    '/imgs/p911White-2.jpg',
+    '/imgs/p911White-3.jpg',
+    '/imgs/p911White-4.jpg',
+    '/imgs/p911White-5.jpg'
+   ],
+    info: [
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.',
+      'Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.',
+      'Reese Lindel rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ipsum dolor sit amet rem ipsum dolor sit amet.'
+    ],
+    histImage: ['/imgs/p911White-hist.jpg'],
   }
 ]
 

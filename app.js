@@ -23,6 +23,10 @@ app.set('view engine', 'pug');
 seedDB();
 
 app.get('/', function(req, res) {
+  res.redirect('/home');
+})
+
+app.get('/home', function(req, res) {
   Porsche.find({}, function(err, invItems) {
     if(err) {
       console.log(err);
