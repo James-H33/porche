@@ -29,9 +29,15 @@ $(window).on('scroll', function() {
   aboutImg();
   specInfo();
   specImg()
-  cIntroTxtSlide();
+  // cIntroTxtSlide();
   cHistoryTxtSlide();
   cHistoryTxtTwoSlide();
+})
+
+$(window).on('load', function() {
+  setTimeout(function(){
+    cIntroTxtSlide()
+  }, 500)
 })
 
 
@@ -99,10 +105,8 @@ function specImg() {
 
 // Intro Text Animation || Collection Page
 function cIntroTxtSlide() {
-  if ($(window).scrollTop() >= $('.collection-intro-display h1').offset().top - ($(window).height() * 0.8)) {
     $('.collection-intro-display h1').addClass('active-intro-text');
     $('.collection-intro-display p').addClass('active-intro-text');
-  }
 }
 
 // History H1 Text Animation || Collection Page
