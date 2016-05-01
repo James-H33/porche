@@ -13,6 +13,7 @@ var Porsche = require('./models/porscheModel');
 
 // Routes
 var collectionRoutes = require('./routes/collectionRoutes');
+var aboutRoutes      = require('./routes/aboutRoutes');
 
 mongoose.connect('mongodb://localhost/porsche_data');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -36,7 +37,9 @@ app.get('/home', function(req, res) {
   })
 })
 
+// USE ROUTES
 app.use('/', collectionRoutes);
+app.use('/', aboutRoutes);
 
 app.listen(port, portIP, function(server){
   console.log('Server has started...');
