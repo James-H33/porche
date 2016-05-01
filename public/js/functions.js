@@ -37,7 +37,8 @@ $(window).on('scroll', function() {
 $(window).on('load', function() {
   setTimeout(function(){
     cIntroTxtSlide()
-  }, 500)
+    aIntroAnimations()
+  }, 300)
 })
 
 
@@ -121,4 +122,9 @@ function cHistoryTxtTwoSlide() {
   if ($(window).scrollTop() >= $('.history-two').offset().top - ($(window).height() * 0.8)) {
     $('.history-two p').addClass('active-history-text');
   }
+}
+
+// Intro Header Animations || About Page
+function aIntroAnimations() {
+  $('.about-intro-header h2').addClass('active-about-intro');
 }
