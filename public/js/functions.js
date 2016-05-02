@@ -22,6 +22,12 @@ $('.collection-slide-icon').on('click', function() {
   }, 1000);
 })
 
+$('.about-slide-icon').on('click', function() {
+  $('html, body').animate({
+    scrollTop: $('.about-history-wrapper').offset().top
+  }, 1000)
+})
+
 
 
 $(window).on('scroll', function() {
@@ -29,9 +35,11 @@ $(window).on('scroll', function() {
   aboutImg();
   specInfo();
   specImg()
-  // cIntroTxtSlide();
+
   cHistoryTxtSlide();
   cHistoryTxtTwoSlide();
+
+  aHistorySlide();
 })
 
 $(window).on('load', function() {
@@ -127,4 +135,12 @@ function cHistoryTxtTwoSlide() {
 // Intro Header Animations || About Page
 function aIntroAnimations() {
   $('.about-intro-header h2').addClass('active-about-intro');
+}
+
+// History Slide in || About Page
+function aHistorySlide() {
+  if ($(window).scrollTop() >= $('.about-history-wrapper').offset().top - ($(window).height() * 0.8)) {
+    $('.about-history-info').addClass('active-history');
+  }
+  console.log($(window).scrollTop())
 }
